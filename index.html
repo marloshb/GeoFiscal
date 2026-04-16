@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Inteligência Territorial e Fiscal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; color: #1e293b; }
+        .layer-card { transition: all 0.3s ease; }
+        .layer-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .data-flow-arrow { animation: pulseArrow 2s infinite; }
+        @keyframes pulseArrow {
+            0% { opacity: 0.3; transform: translateY(0); }
+            50% { opacity: 1; transform: translateY(-4px); }
+            100% { opacity: 0.3; transform: translateY(0); }
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto mb-10 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-emerald-600 mb-3">
+            Plataforma de Inteligência Territorial e Fiscal
+        </h1>
+        <p class="text-slate-600 text-sm md:text-base max-w-3xl mx-auto">
+            Arquitetura em 7 Camadas: Da fragmentação de dados à inteligência fiscal acionável, criando a "verdade única do imóvel" com IA e ArcGIS.
+        </p>
+    </header>
+
+    <!-- Main Architecture Grid -->
+    <main class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 relative">
+
+        <!-- Sidebar: Camada 7 (Governança) -->
+        <aside class="w-full lg:w-72 flex-shrink-0 flex flex-col bg-white rounded-xl border-l-4 border-rose-500 p-5 shadow-sm border border-slate-200 order-2 lg:order-1 relative">
+            <div class="sticky top-8 text-center flex flex-col items-center">
+                <div class="p-3 bg-rose-100 rounded-full text-rose-600 mb-4 shadow-sm">
+                    <i class="fas fa-shield-alt text-2xl"></i>
+                </div>
+                <h2 class="text-xl font-bold text-slate-800 mb-1">Camada 7</h2>
+                <h3 class="text-sm font-medium text-rose-600 mb-3">Governança & Segurança</h3>
+                <p class="text-xs text-slate-500 mb-6 italic text-center">Essencial para lidar com dado territorial, fiscal e registral de forma auditável.</p>
+                
+                <div class="space-y-4 w-full">
+                    <div class="bg-rose-50 p-4 rounded-lg border border-rose-100 flex flex-col items-center text-center">
+                        <i class="fas fa-user-lock text-rose-500 text-xl mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800 mb-2 uppercase tracking-wider">Requisitos de Segurança</h3>
+                        <div class="text-xs text-slate-600 space-y-1.5 w-full">
+                            <p>Controle de acesso por perfil</p>
+                            <p>Segregação de funções</p>
+                            <p>Aderência total à LGPD</p>
+                            <p>Mascaramento de dados</p>
+                            <p>Política de retenção</p>
+                        </div>
+                    </div>
+                    <div class="bg-rose-50 p-4 rounded-lg border border-rose-100 flex flex-col items-center text-center">
+                        <i class="fas fa-history text-rose-500 text-xl mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800 mb-2 uppercase tracking-wider">Auditoria & Rastreabilidade</h3>
+                        <div class="text-xs text-slate-600 space-y-1.5 w-full">
+                            <p>Trilha de auditoria completa</p>
+                            <p>Versionamento de dados</p>
+                            <p>Logs de integração e edição</p>
+                            <p>Histórico de geometria/atributos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Layers Stack (Layers 6 to 1) -->
+        <div class="flex-1 flex flex-col gap-3 order-1 lg:order-2">
+
+            <!-- Camada 6: Aplicações de negócio -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 relative layer-card border-t-4 border-t-amber-500">
+                <div class="flex flex-col items-center justify-center mb-5 pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-desktop text-amber-500 text-xl"></i>
+                        <h2 class="text-lg font-bold text-slate-800">Camada 6: Aplicações de Negócio</h2>
+                    </div>
+                    <span class="text-xs font-medium text-slate-500 mt-1">A solução vira operação</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-amber-50/50 p-4 rounded-lg border border-amber-200 flex flex-col items-center text-center hover:bg-amber-50 transition-colors">
+                        <i class="fas fa-chart-pie text-2xl text-amber-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-2">Painel Executivo</h3>
+                        <div class="text-xs text-slate-600 space-y-1">
+                            <p>Mapa de evasão fiscal</p>
+                            <p>Valor potencial de recuperação</p>
+                            <p>Status de integração cadastral</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50/50 p-4 rounded-lg border border-amber-200 flex flex-col items-center text-center hover:bg-amber-50 transition-colors">
+                        <i class="fas fa-search-dollar text-2xl text-amber-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-2">Inteligência Fiscal</h3>
+                        <div class="text-xs text-slate-600 space-y-1">
+                            <p>Cadastro vs Realidade</p>
+                            <p>Score de risco do imóvel</p>
+                            <p>Evidências geoespaciais</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50/50 p-4 rounded-lg border border-amber-200 flex flex-col items-center text-center hover:bg-amber-50 transition-colors">
+                        <i class="fas fa-mobile-alt text-2xl text-amber-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-2">Fiscalização Assistida</h3>
+                        <div class="text-xs text-slate-600 space-y-1">
+                            <p>Fila priorizada e roteiros</p>
+                            <p>Checklist digital no celular</p>
+                            <p>Anexação de fotos de campo</p>
+                        </div>
+                    </div>
+                    <div class="bg-amber-50/50 p-4 rounded-lg border border-amber-200 flex flex-col items-center text-center hover:bg-amber-50 transition-colors">
+                        <i class="fas fa-broom text-2xl text-amber-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-2">Saneamento Cadastral</h3>
+                        <div class="text-xs text-slate-600 space-y-1">
+                            <p>Revisão e homologação</p>
+                            <p>Atualização da base tributária</p>
+                            <p>Sincronia com arrecadador</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center text-slate-300 my-1"><i class="fas fa-chevron-up text-xl data-flow-arrow"></i></div>
+
+            <!-- Camada 5: IA e Inteligência Fiscal -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 relative layer-card border-t-4 border-t-fuchsia-500">
+                <div class="flex flex-col items-center justify-center mb-5 pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-brain text-fuchsia-500 text-xl"></i>
+                        <h2 class="text-lg font-bold text-slate-800">Camada 5: IA e Inteligência Fiscal</h2>
+                    </div>
+                    <span class="text-xs font-medium text-slate-500 mt-1">O motor de ganho real e detecção</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-fuchsia-50/50 p-4 rounded-lg border border-fuchsia-200 flex flex-col items-center text-center hover:bg-fuchsia-50 transition-colors">
+                        <i class="fas fa-object-group text-2xl text-fuchsia-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-2">Matching Inteligente</h3>
+                        <p class="text-xs text-slate-600">Reconciliação de endereços divergentes e matrículas ambíguas via Fuzzy Matching.</p>
+                    </div>
+                    <div class="bg-fuchsia-50/50 p-4 rounded-lg border border-fuchsia-200 flex flex-col items-center text-center hover:bg-fuchsia-50 transition-colors">
+                        <i class="fas fa-expand-arrows-alt text-2xl text-fuchsia-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-2">Detecção de Expansão</h3>
+                        <p class="text-xs text-slate-600">Visão computacional para achar ampliações e novas edificações em imagens.</p>
+                    </div>
+                    <div class="bg-fuchsia-50/50 p-4 rounded-lg border border-fuchsia-200 flex flex-col items-center text-center hover:bg-fuchsia-50 transition-colors">
+                        <i class="fas fa-building text-2xl text-fuchsia-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-2">Classificação de Uso</h3>
+                        <p class="text-xs text-slate-600">Detecta incompatibilidade: residencial declarado vs. comercial observado.</p>
+                    </div>
+                    <div class="bg-fuchsia-50/50 p-4 rounded-lg border border-fuchsia-200 flex flex-col items-center text-center hover:bg-fuchsia-50 transition-colors">
+                        <i class="fas fa-sort-amount-up text-2xl text-fuchsia-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-2">Score & Priorização</h3>
+                        <p class="text-xs text-slate-600">Pontua imóveis e ordena a fila de fiscalização pelo maior retorno financeiro.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center text-slate-300 my-1"><i class="fas fa-chevron-up text-xl data-flow-arrow"></i></div>
+
+            <!-- Camada 4: Núcleo Geoespacial ArcGIS -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 relative layer-card border-t-4 border-t-blue-500">
+                <div class="flex flex-col items-center justify-center mb-5 pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-globe-americas text-blue-500 text-xl"></i>
+                        <h2 class="text-lg font-bold text-slate-800">Camada 4: Núcleo Geoespacial ArcGIS</h2>
+                    </div>
+                    <span class="text-xs font-medium text-slate-500 mt-1">A plataforma operacional central</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-200 flex flex-col items-center text-center hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-server text-xl text-blue-500 mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800">ArcGIS Enterprise</h3>
+                        <p class="text-[11px] text-slate-600 mt-2">Centro: serviços, segurança e integração.</p>
+                    </div>
+                    <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-200 flex flex-col items-center text-center hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-laptop-code text-xl text-blue-500 mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800">ArcGIS Pro</h3>
+                        <p class="text-[11px] text-slate-600 mt-2">Modelagem, QA/QC e manutenção.</p>
+                    </div>
+                    <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-200 flex flex-col items-center text-center hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-images text-xl text-blue-500 mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800">ArcGIS Image Server</h3>
+                        <p class="text-[11px] text-slate-600 mt-2">Processamento de imagens em escala.</p>
+                    </div>
+                    <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-200 flex flex-col items-center text-center hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-tachometer-alt text-xl text-blue-500 mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800">ArcGIS Dashboards</h3>
+                        <p class="text-[11px] text-slate-600 mt-2">Metas de recuperação e visão macro.</p>
+                    </div>
+                    <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-200 flex flex-col items-center text-center md:col-span-2 hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-window-restore text-xl text-blue-500 mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800">Experience Builder & Web AppBuilder</h3>
+                        <p class="text-[11px] text-slate-600 mt-2">Portal operacional e consulta integrada para gestores.</p>
+                    </div>
+                    <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-200 flex flex-col items-center text-center hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-map-marked-alt text-xl text-blue-500 mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800">Field Maps & Survey123</h3>
+                        <p class="text-[11px] text-slate-600 mt-2">Vistorias e coleta de dados em campo.</p>
+                    </div>
+                    <div class="bg-blue-50/50 p-4 rounded-lg border border-blue-200 flex flex-col items-center text-center hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-project-diagram text-xl text-blue-500 mb-2"></i>
+                        <h3 class="text-xs font-bold text-slate-800">Workflow Manager</h3>
+                        <p class="text-[11px] text-slate-600 mt-2">Orquestração entre cadastro e tributação.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center text-slate-300 my-1"><i class="fas fa-chevron-up text-xl data-flow-arrow"></i></div>
+
+            <!-- Camada 3: Identidade e Normalização Territorial -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 relative layer-card border-t-4 border-t-emerald-500">
+                <div class="flex flex-col items-center justify-center mb-5 pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-fingerprint text-emerald-500 text-xl"></i>
+                        <h2 class="text-lg font-bold text-slate-800">Camada 3: Identidade e Normalização</h2>
+                    </div>
+                    <span class="text-xs font-medium text-slate-500 mt-1">A verdade única do imóvel</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-emerald-50/50 p-4 rounded-lg border border-emerald-200 flex flex-col items-center text-center hover:bg-emerald-50 transition-colors">
+                        <i class="fas fa-id-card text-2xl text-emerald-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-3">1. Master Data do Imóvel</h3>
+                        <div class="text-[11px] text-slate-600 space-y-1.5">
+                            <p>ID Municipal, CIB e Matrícula</p>
+                            <p>CPF/CNPJ vinculados</p>
+                            <p>Geometrias e endereços únicos</p>
+                            <p>Área cadastrada vs observada</p>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-50/50 p-4 rounded-lg border border-emerald-200 flex flex-col items-center text-center hover:bg-emerald-50 transition-colors">
+                        <i class="fas fa-filter text-2xl text-emerald-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-3">2. Processo de Normalização</h3>
+                        <div class="text-[11px] text-slate-600 space-y-1.5">
+                            <p>Padronização de endereços</p>
+                            <p>Deduplicação e Reconciliação</p>
+                            <p>Geocodificação e Ajuste topológico</p>
+                            <p>Vínculo Lote ↔ Edificação ↔ Registro</p>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-50/50 p-4 rounded-lg border border-emerald-200 flex flex-col items-center text-center hover:bg-emerald-50 transition-colors">
+                        <i class="fas fa-shield-check text-2xl text-emerald-500 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-3">3. Regras de Qualidade (QA/QC)</h3>
+                        <div class="text-[11px] text-slate-600 space-y-1.5">
+                            <p>Geometria inválida / Área incompatível</p>
+                            <p>Falta de correspondência registral</p>
+                            <p>Duplicidade ou uso divergente</p>
+                            <p class="text-emerald-600 font-semibold mt-2">Geodatabase & Topologia ArcGIS</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center text-slate-300 my-1"><i class="fas fa-chevron-up text-xl data-flow-arrow"></i></div>
+
+            <!-- Camada 2: Ingestão e Interoperabilidade -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 relative layer-card border-t-4 border-t-cyan-500">
+                <div class="flex flex-col items-center justify-center mb-5 pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-network-wired text-cyan-500 text-xl"></i>
+                        <h2 class="text-lg font-bold text-slate-800">Camada 2: Ingestão e Interoperabilidade</h2>
+                    </div>
+                    <span class="text-xs font-medium text-slate-500 mt-1">Conectando o município ao ecossistema</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-cyan-50/50 p-4 rounded-lg border border-cyan-200 flex flex-col items-center text-center hover:bg-cyan-50 transition-colors">
+                        <i class="fas fa-exchange-alt text-2xl text-cyan-500 mb-3"></i>
+                        <h3 class="text-xs font-bold text-slate-800 mb-2 uppercase">Barramento de Integração</h3>
+                        <p class="text-[11px] text-slate-600">APIs REST, Mensageria, Conectores ETL/ELT e Webhooks de eventos.</p>
+                    </div>
+                    <div class="bg-cyan-50/50 p-4 rounded-lg border border-cyan-200 flex flex-col items-center text-center hover:bg-cyan-50 transition-colors">
+                        <i class="fas fa-sync text-2xl text-cyan-500 mb-3"></i>
+                        <h3 class="text-xs font-bold text-slate-800 mb-2 uppercase">Funções Principais</h3>
+                        <p class="text-[11px] text-slate-600">Captura multicanal, atualização contínua e integração via SINTER.</p>
+                    </div>
+                    <div class="bg-cyan-50/50 p-4 rounded-lg border border-cyan-200 flex flex-col items-center text-center hover:bg-cyan-50 transition-colors">
+                        <i class="fas fa-plug text-2xl text-cyan-500 mb-3"></i>
+                        <h3 class="text-xs font-bold text-slate-800 mb-2 uppercase">Ecossistema ArcGIS</h3>
+                        <p class="text-[11px] text-slate-600">ArcGIS Velocity, Data Interoperability e arcabouço do Enterprise.</p>
+                    </div>
+                    <div class="bg-cyan-50/50 p-4 rounded-lg border border-cyan-200 flex flex-col items-center text-center hover:bg-cyan-50 transition-colors">
+                        <i class="fas fa-layer-group text-2xl text-cyan-500 mb-3"></i>
+                        <h3 class="text-xs font-bold text-slate-800 mb-2 uppercase">Middleware Complementar</h3>
+                        <p class="text-[11px] text-slate-600">Controle transacional, filas e padronização de contratos API.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center text-slate-300 my-1"><i class="fas fa-chevron-up text-xl data-flow-arrow"></i></div>
+
+            <!-- Camada 1: Fontes de Dados -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 relative layer-card border-t-4 border-t-slate-400">
+                <div class="flex flex-col items-center justify-center mb-5 pb-3 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-database text-slate-500 text-xl"></i>
+                        <h2 class="text-lg font-bold text-slate-800">Camada 1: Fontes de Dados</h2>
+                    </div>
+                    <span class="text-xs font-medium text-slate-500 mt-1">Unificando a fragmentação da base</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 flex flex-col items-center text-center hover:bg-slate-100 transition-colors">
+                        <i class="fas fa-city text-2xl text-slate-400 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-3">Municipais</h3>
+                        <div class="text-[11px] text-slate-600 space-y-1.5">
+                            <p>Cadastro imobiliário / IPTU</p>
+                            <p>Planta Genérica de Valores</p>
+                            <p>Alvarás e Habite-se</p>
+                            <p>ISS / Base de fiscalização</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 flex flex-col items-center text-center hover:bg-slate-100 transition-colors">
+                        <i class="fas fa-landmark text-2xl text-slate-400 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-3">Registrais / Nacionais</h3>
+                        <div class="text-[11px] text-slate-600 space-y-1.5">
+                            <p>SINTER e CIB</p>
+                            <p>Dados de Cartórios</p>
+                            <p>Bases da Receita Federal</p>
+                            <p>Cadastros Estaduais</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 flex flex-col items-center text-center hover:bg-slate-100 transition-colors">
+                        <i class="fas fa-satellite-dish text-2xl text-slate-400 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-3">Geoespaciais</h3>
+                        <div class="text-[11px] text-slate-600 space-y-1.5">
+                            <p>Ortofotos / Satélite / Radar</p>
+                            <p>Base cartográfica municipal</p>
+                            <p>Lotes, quadras e setores</p>
+                            <p>Uso e zoneamento</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 flex flex-col items-center text-center hover:bg-slate-100 transition-colors">
+                        <i class="fas fa-chart-bar text-2xl text-slate-400 mb-3"></i>
+                        <h3 class="text-sm font-bold text-slate-800 mb-3">Apoio Analítico</h3>
+                        <div class="text-[11px] text-slate-600 space-y-1.5">
+                            <p>Dados socioeconômicos</p>
+                            <p>Limites administrativos</p>
+                            <p>Histórico de transações</p>
+                            <p>Dados de vistorias</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="max-w-7xl mx-auto mt-8 text-center text-slate-400 text-xs pb-6">
+        Desenvolvido para visualização de arquitetura de Inteligência Territorial e Fiscal.
+    </footer>
+
+</body>
+</html>
