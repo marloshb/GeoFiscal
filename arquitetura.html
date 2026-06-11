@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Inteligência Territorial e Fiscal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; color: #1e293b; overflow-x: hidden; }
+        .layer-row { transition: all 0.2s ease; }
+        .layer-row:hover { transform: translateX(2px); border-color: #cbd5e1; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .bullet-separator { margin: 0 4px; color: #94a3b8; }
+    </style>
+</head>
+<body class="min-h-screen p-3 md:p-4 font-sans antialiased flex flex-col justify-center items-center">
+
+    <div class="w-full max-w-[1700px] flex flex-col gap-3">
+        
+        <!-- Header Widescreen -->
+        <header class="w-full bg-white border border-slate-200 shadow-sm rounded-xl p-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center gap-4">
+                <!-- Logótipo Personalizado -->
+                <div class="h-26 md:h-28 flex-shrink-0 transform transition-transform hover:scale-105 duration-300 relative group">
+                    <!-- Glow effect animado no hover -->
+                    <div class="absolute inset-0 bg-emerald-300 rounded-lg blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+                    
+                    <!-- Imagem inserida -->
+                    <img src="GeoFiscal.png" alt="GeoFiscal Logo" class="h-full w-auto object-contain relative z-10 drop-shadow-md">
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-emerald-600">
+                        Plataforma de Inteligência Territorial e Fiscal
+                    </h1>
+                    <p class="text-slate-500 text-xs font-medium">Arquitetura em Camadas: Da estruturação dos dados à "verdade única do imóvel" com IA e ArcGIS.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Architecture Split Layout -->
+        <main class="w-full flex flex-col lg:flex-row gap-3 relative flex-1">
+
+            <!-- Sidebar: Camada 7 (Governança) - Vertical Pillar -->
+            <aside class="w-full lg:w-56 flex-shrink-0 bg-white rounded-xl border border-rose-200 border-l-4 border-l-rose-500 p-4 shadow-sm flex flex-col justify-between">
+                <div class="text-center mb-4">
+                    <i class="fas fa-shield-alt text-3xl text-rose-500 mb-2 drop-shadow-sm"></i>
+                    <h2 class="text-sm font-bold text-slate-800 leading-tight">Camada 7</h2>
+                    <h3 class="text-xs font-semibold text-rose-600 mb-1">Governança & Segurança</h3>
+                    <p class="text-[10px] text-slate-500 leading-tight">Gestão auditável de dados territoriais, fiscais e registrais.</p>
+                </div>
+                
+                <div class="flex flex-col gap-3">
+                    <div class="bg-rose-50/50 p-3 rounded text-center border border-rose-100/50 hover:bg-rose-50 transition-colors">
+                        <i class="fas fa-user-lock text-rose-400 mb-1.5 text-lg"></i>
+                        <h3 class="text-[11px] font-bold text-slate-800 mb-1 uppercase tracking-tight">Segurança</h3>
+                        <p class="text-[10px] text-slate-600 leading-relaxed">
+                            Controles por perfil<br>
+                            Segregação e Mascaramento<br>
+                            LGPD e Retenção
+                        </p>
+                    </div>
+                    <div class="bg-rose-50/50 p-3 rounded text-center border border-rose-100/50 hover:bg-rose-50 transition-colors">
+                        <i class="fas fa-history text-rose-400 mb-1.5 text-lg"></i>
+                        <h3 class="text-[11px] font-bold text-slate-800 mb-1 uppercase tracking-tight">Auditoria</h3>
+                        <p class="text-[10px] text-slate-600 leading-relaxed">
+                            Trilha completa<br>
+                            Logs de integração<br>
+                            Versionamento de atributos<br>e geometria
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Layers Stack (Layers 6 to 1) -->
+            <div class="flex-1 flex flex-col gap-2">
+
+                <!-- Camada 6: Aplicações de negócio -->
+                <div class="flex bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden layer-row min-h-[76px]">
+                    <div class="w-48 shrink-0 bg-amber-50 flex flex-col justify-center p-3 border-r border-amber-100 relative">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-amber-500"></div>
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <i class="fas fa-desktop text-amber-500 text-sm"></i>
+                            <h2 class="text-xs font-bold text-slate-800">Camada 6</h2>
+                        </div>
+                        <p class="text-[10px] font-semibold text-amber-700 leading-tight">Aplicações de Negócio</p>
+                        <span class="text-[9px] text-slate-500 mt-0.5 hidden xl:block">A solução vira operação</span>
+                    </div>
+                    <div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-2 p-2 bg-slate-50/30">
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-amber-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-chart-pie text-amber-500"></i> Painel Executivo</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Evasão fiscal<span class="bullet-separator">•</span>Potencial recuperação<span class="bullet-separator">•</span>Status de integração</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-amber-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-search-dollar text-amber-500"></i> Inteligência Fiscal</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Cadastro vs Realidade<span class="bullet-separator">•</span>Score de risco<span class="bullet-separator">•</span>Evidências GEO</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-amber-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-mobile-alt text-amber-500"></i> Fiscalização Assistida</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Fila e roteiros<span class="bullet-separator">•</span>Checklist app<span class="bullet-separator">•</span>Anexo de fotos</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-amber-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-broom text-amber-500"></i> Saneamento Cadastral</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Homologação<span class="bullet-separator">•</span>Base tributária<span class="bullet-separator">•</span>Sincronia arrecadador</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camada 5: IA e Inteligência Fiscal -->
+                <div class="flex bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden layer-row min-h-[76px]">
+                    <div class="w-48 shrink-0 bg-fuchsia-50 flex flex-col justify-center p-3 border-r border-fuchsia-100 relative">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-fuchsia-500"></div>
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <i class="fas fa-brain text-fuchsia-500 text-sm"></i>
+                            <h2 class="text-xs font-bold text-slate-800">Camada 5</h2>
+                        </div>
+                        <p class="text-[10px] font-semibold text-fuchsia-700 leading-tight">IA & Inteligência Fiscal</p>
+                        <span class="text-[9px] text-slate-500 mt-0.5 hidden xl:block">Detecção e retorno</span>
+                    </div>
+                    <div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-2 p-2 bg-slate-50/30">
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-fuchsia-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-object-group text-fuchsia-500"></i> Matching Inteligente</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Reconciliação de endereços e matrículas ambíguas (Fuzzy)</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-fuchsia-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-expand-arrows-alt text-fuchsia-500"></i> Detecção de Expansão</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Visão computacional para novas edificações em imagens</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-fuchsia-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-building text-fuchsia-500"></i> Classificação de Uso</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Compara residencial declarado vs. uso comercial observado</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-fuchsia-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-sort-amount-up text-fuchsia-500"></i> Score & Priorização</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Ordena a fila de fiscalização pelo maior retorno financeiro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camada 4: Núcleo Geoespacial ArcGIS -->
+                <div class="flex bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden layer-row min-h-[76px]">
+                    <div class="w-48 shrink-0 bg-blue-50 flex flex-col justify-center p-3 border-r border-blue-100 relative">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-blue-500"></div>
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <i class="fas fa-globe-americas text-blue-500 text-sm"></i>
+                            <h2 class="text-xs font-bold text-slate-800">Camada 4</h2>
+                        </div>
+                        <p class="text-[10px] font-semibold text-blue-700 leading-tight">Núcleo Geoespacial ArcGIS</p>
+                        <span class="text-[9px] text-slate-500 mt-0.5 hidden xl:block">Plataforma operacional</span>
+                    </div>
+                    <div class="flex-1 grid grid-cols-2 md:grid-cols-7 gap-2 p-2 bg-slate-50/30">
+                        <div class="bg-white border border-slate-100 rounded p-1.5 text-center hover:border-blue-200 flex flex-col items-center justify-center">
+                            <i class="fas fa-server text-blue-500 text-sm mb-1"></i>
+                            <h3 class="text-[10px] font-bold text-slate-800 leading-tight">Enterprise</h3>
+                            <p class="text-[8px] text-slate-500 mt-0.5 leading-tight">Serviços & Segurança</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-1.5 text-center hover:border-blue-200 flex flex-col items-center justify-center">
+                            <i class="fas fa-laptop-code text-blue-500 text-sm mb-1"></i>
+                            <h3 class="text-[10px] font-bold text-slate-800 leading-tight">ArcGIS Pro</h3>
+                            <p class="text-[8px] text-slate-500 mt-0.5 leading-tight">Modelagem & QA/QC</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-1.5 text-center hover:border-blue-200 flex flex-col items-center justify-center">
+                            <i class="fas fa-images text-blue-500 text-sm mb-1"></i>
+                            <h3 class="text-[10px] font-bold text-slate-800 leading-tight">Image Server</h3>
+                            <p class="text-[8px] text-slate-500 mt-0.5 leading-tight">Raster em escala</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-1.5 text-center hover:border-blue-200 flex flex-col items-center justify-center">
+                            <i class="fas fa-tachometer-alt text-blue-500 text-sm mb-1"></i>
+                            <h3 class="text-[10px] font-bold text-slate-800 leading-tight">Dashboards</h3>
+                            <p class="text-[8px] text-slate-500 mt-0.5 leading-tight">Metas e Visão</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-1.5 text-center hover:border-blue-200 flex flex-col items-center justify-center">
+                            <i class="fas fa-window-restore text-blue-500 text-sm mb-1"></i>
+                            <h3 class="text-[10px] font-bold text-slate-800 leading-tight">Exp. Builder</h3>
+                            <p class="text-[8px] text-slate-500 mt-0.5 leading-tight">Portal Integrado</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-1.5 text-center hover:border-blue-200 flex flex-col items-center justify-center">
+                            <i class="fas fa-map-marked-alt text-blue-500 text-sm mb-1"></i>
+                            <h3 class="text-[10px] font-bold text-slate-800 leading-tight">Field Maps</h3>
+                            <p class="text-[8px] text-slate-500 mt-0.5 leading-tight">Vistorias offline</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-1.5 text-center hover:border-blue-200 flex flex-col items-center justify-center">
+                            <i class="fas fa-project-diagram text-blue-500 text-sm mb-1"></i>
+                            <h3 class="text-[10px] font-bold text-slate-800 leading-tight">Workflow Mgr</h3>
+                            <p class="text-[8px] text-slate-500 mt-0.5 leading-tight">Orquestração</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camada 3: Identidade e Normalização -->
+                <div class="flex bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden layer-row min-h-[76px]">
+                    <div class="w-48 shrink-0 bg-emerald-50 flex flex-col justify-center p-3 border-r border-emerald-100 relative">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500"></div>
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <i class="fas fa-fingerprint text-emerald-500 text-sm"></i>
+                            <h2 class="text-xs font-bold text-slate-800">Camada 3</h2>
+                        </div>
+                        <p class="text-[10px] font-semibold text-emerald-700 leading-tight">Identidade & Normalização</p>
+                        <span class="text-[9px] text-slate-500 mt-0.5 hidden xl:block">Verdade única do imóvel</span>
+                    </div>
+                    <div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-2 p-2 bg-slate-50/30">
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-emerald-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-id-card text-emerald-500"></i> Master Data do Imóvel</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">ID Municipal<span class="bullet-separator">•</span>CIB e Matrícula<span class="bullet-separator">•</span>CPFs<span class="bullet-separator">•</span>Área cadastrada vs Real</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-emerald-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-filter text-emerald-500"></i> Normalização</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Padronização de endereços<span class="bullet-separator">•</span>Deduplicação<span class="bullet-separator">•</span>Ajuste topológico</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-emerald-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-shield-check text-emerald-500"></i> Qualidade (QA/QC)</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Alerta: Geometria inválida<span class="bullet-separator">•</span>Uso divergente<span class="bullet-separator">•</span>Falta de registro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camada 2: Ingestão e Interoperabilidade -->
+                <div class="flex bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden layer-row min-h-[76px]">
+                    <div class="w-48 shrink-0 bg-cyan-50 flex flex-col justify-center p-3 border-r border-cyan-100 relative">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-cyan-500"></div>
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <i class="fas fa-network-wired text-cyan-500 text-sm"></i>
+                            <h2 class="text-xs font-bold text-slate-800">Camada 2</h2>
+                        </div>
+                        <p class="text-[10px] font-semibold text-cyan-700 leading-tight">Ingestão & Integração</p>
+                        <span class="text-[9px] text-slate-500 mt-0.5 hidden xl:block">Conexão do ecossistema</span>
+                    </div>
+                    <div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-2 p-2 bg-slate-50/30">
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-cyan-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-exchange-alt text-cyan-500"></i> Barramento</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">APIs REST<span class="bullet-separator">•</span>Mensageria<span class="bullet-separator">•</span>ETL<span class="bullet-separator">•</span>Webhooks</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-cyan-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-sync text-cyan-500"></i> Funções</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Captura multicanal<span class="bullet-separator">•</span>Atualização contínua<span class="bullet-separator">•</span>SINTER</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-cyan-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-plug text-cyan-500"></i> Tecnologias ArcGIS</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Velocity (IoT)<span class="bullet-separator">•</span>Data Interoperability (FME)</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-cyan-200 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-layer-group text-cyan-500"></i> Middleware</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Controle transacional<span class="bullet-separator">•</span>Retry<span class="bullet-separator">•</span>Fila</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camada 1: Fontes de Dados -->
+                <div class="flex bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden layer-row min-h-[76px]">
+                    <div class="w-48 shrink-0 bg-slate-100 flex flex-col justify-center p-3 border-r border-slate-200 relative">
+                        <div class="absolute left-0 top-0 bottom-0 w-1 bg-slate-500"></div>
+                        <div class="flex items-center gap-2 mb-0.5">
+                            <i class="fas fa-database text-slate-500 text-sm"></i>
+                            <h2 class="text-xs font-bold text-slate-800">Camada 1</h2>
+                        </div>
+                        <p class="text-[10px] font-semibold text-slate-700 leading-tight">Fontes de Dados Brutos</p>
+                        <span class="text-[9px] text-slate-500 mt-0.5 hidden xl:block">Unificando a fragmentação</span>
+                    </div>
+                    <div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-2 p-2 bg-slate-50/30">
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-slate-300 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-city text-slate-400"></i> Municipais</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">IPTU e Cadastro<span class="bullet-separator">•</span>PGV<span class="bullet-separator">•</span>Alvarás<span class="bullet-separator">•</span>ISS</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-slate-300 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-landmark text-slate-400"></i> Registrais</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">SINTER<span class="bullet-separator">•</span>CIB<span class="bullet-separator">•</span>Cartórios<span class="bullet-separator">•</span>Receita Federal</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-slate-300 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-satellite-dish text-slate-400"></i> Geoespaciais</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Ortofotos<span class="bullet-separator">•</span>Satélite<span class="bullet-separator">•</span>Base Cartográfica<span class="bullet-separator">•</span>Lotes</p>
+                        </div>
+                        <div class="bg-white border border-slate-100 rounded p-2 text-center hover:border-slate-300 transition-colors flex flex-col justify-center">
+                            <h3 class="text-[11px] font-bold text-slate-800 flex items-center justify-center gap-1.5"><i class="fas fa-chart-bar text-slate-400"></i> Apoio Analítico</h3>
+                            <p class="text-[9px] text-slate-500 mt-1">Dados de campo<span class="bullet-separator">•</span>Limites<span class="bullet-separator">•</span>Histórico de transações</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Fluxo Operacional Ponta a Ponta (Horizontal Bottom Bar) -->
+        <section class="w-full bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col xl:flex-row">
+            <div class="w-full xl:w-48 shrink-0 bg-slate-800 flex flex-col justify-center p-3 border-r border-slate-700 relative text-center xl:text-left">
+                <div class="flex items-center justify-center xl:justify-start gap-2 mb-0.5">
+                    <i class="fas fa-stream text-white text-sm"></i>
+                    <h2 class="text-xs font-bold text-white uppercase tracking-wider">Ação e Fluxo</h2>
+                </div>
+                <p class="text-[10px] font-medium text-slate-300 leading-tight">Jornada ponta a ponta</p>
+            </div>
+            
+            <div class="flex-1 p-3 flex flex-col md:flex-row gap-3 items-center bg-slate-50">
+                <!-- Step 1 -->
+                <div class="flex-1 w-full bg-white border border-cyan-200 rounded p-2 flex items-center gap-3 relative shadow-sm hover:shadow transition-shadow">
+                    <div class="w-8 h-8 shrink-0 bg-cyan-50 text-cyan-600 border border-cyan-300 rounded-full flex items-center justify-center"><i class="fas fa-download text-sm"></i></div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-slate-800 mb-0.5">1. Integração</h3>
+                        <p class="text-[9px] text-slate-500 leading-tight">Ler origens e imagens • Padronizar</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-300 absolute -right-2 top-1/2 -translate-y-1/2 bg-slate-50 hidden md:block z-10"></i>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex-1 w-full bg-white border border-emerald-200 rounded p-2 flex items-center gap-3 relative shadow-sm hover:shadow transition-shadow">
+                    <div class="w-8 h-8 shrink-0 bg-emerald-50 text-emerald-600 border border-emerald-300 rounded-full flex items-center justify-center"><i class="fas fa-link text-sm"></i></div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-slate-800 mb-0.5">2. Reconciliação</h3>
+                        <p class="text-[9px] text-slate-500 leading-tight">Criar entidade mestre • Validar GIS</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-300 absolute -right-2 top-1/2 -translate-y-1/2 bg-slate-50 hidden md:block z-10"></i>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex-1 w-full bg-white border border-fuchsia-200 rounded p-2 flex items-center gap-3 relative shadow-sm hover:shadow transition-shadow">
+                    <div class="w-8 h-8 shrink-0 bg-fuchsia-50 text-fuchsia-600 border border-fuchsia-300 rounded-full flex items-center justify-center"><i class="fas fa-lightbulb text-sm"></i></div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-slate-800 mb-0.5">3. Inteligência</h3>
+                        <p class="text-[9px] text-slate-500 leading-tight">IA de detecção • Calcular score</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-300 absolute -right-2 top-1/2 -translate-y-1/2 bg-slate-50 hidden md:block z-10"></i>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex-1 w-full bg-white border border-amber-200 rounded p-2 flex items-center gap-3 relative shadow-sm hover:shadow transition-shadow">
+                    <div class="w-8 h-8 shrink-0 bg-amber-50 text-amber-600 border border-amber-300 rounded-full flex items-center justify-center"><i class="fas fa-cogs text-sm"></i></div>
+                    <div>
+                        <h3 class="text-[11px] font-bold text-slate-800 mb-0.5">4. Operação</h3>
+                        <p class="text-[9px] text-slate-500 leading-tight">Abrir workflow • Vistoria • Atualizar fiscal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
